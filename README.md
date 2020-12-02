@@ -5,5 +5,7 @@ A retail management system designed in layers:
 - RMDesktopUI is the WPF user interface project.
 
 ## NuGet Packages
-- Caliburn.Micro (MVVM User Interface in WPF)
-- Dapper (Data Access to SQLite)
+- Dapper for the Data Access to SQLite,
+- Swashbuckle - Swagger for the API documentation,
+- Caliburn.Micro for MVVM User Interface in WPF.
+
