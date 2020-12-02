@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RMDesktopUI.Views"
         mc:Ignorable="d" FontSize="18" Foreground="White"
-        Title="ShellView" Height="450" Width="800" Background="#FF2D2D30">
+        Title="ShellView" Height="600" Width="1000" Background="#FF2D2D30">
     <DockPanel>
         <Menu DockPanel.Dock="Top" FontSize="18" Background="#FF2D2D30" Foreground="White">
             <MenuItem Header="_File">
@@ -16,11 +16,7 @@
             </MenuItem>
         </Menu>
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="257*"/>
-                <ColumnDefinition Width="535*"/>
-            </Grid.ColumnDefinitions>
-            <ContentControl x:Name="ActiveItem" Margin="5" Grid.ColumnSpan="2" Foreground="#FF2D2D30"/>
+            <ContentControl x:Name="ActiveItem" Margin="20 5 20 20" Grid.ColumnSpan="2" Foreground="#FF2D2D30"/>
         </Grid>
     </DockPanel>
 
