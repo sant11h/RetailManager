@@ -21,6 +21,12 @@ namespace RMDesktopUI.Library.API
             InitializeClient();
             _loggedInUser = loggedInUser;
         }
+
+        public HttpClient ApiClient
+        {
+            get { return _APIClient; }
+        }
+
         private void InitializeClient()
         {
             //Reads the api value in App.config
