@@ -10,21 +10,18 @@ namespace RMDesktopUI.ViewModels
 {
     public class ShellViewModel : Conductor<object>, IHandle<LogOnEvent>
     {
-        private SimpleContainer _container;
         private SalesViewModel _salesVM;
         private IEventAggregator _events;
 
 
-        public ShellViewModel(SimpleContainer container, SalesViewModel salesVM, 
-            IEventAggregator events)
+        public ShellViewModel( SalesViewModel salesVM, IEventAggregator events)
         {
-            _container = container;
             _events = events;
             _salesVM = salesVM;
 
             _events.Subscribe(this);
             
-            ActivateItem(_container.GetInstance<LoginViewModel>());
+            ActivateItem(IoC.Get<LoginViewModel>());
         }
 
         public void Handle(LogOnEvent message)

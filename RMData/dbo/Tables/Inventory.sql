@@ -5,5 +5,5 @@
     [Quantity] INT NOT NULL DEFAULT 1, 
     [PurchasePrice] MONEY NOT NULL, 
     [PurchaseDate] DATETIME2 NOT NULL DEFAULT getUTCDate(), 
-    CONSTRAINT [FK_Inventory_ToProduct] FOREIGN KEY (ProductId) REFERENCES Product(id) 
+    CONSTRAINT [FK_Inventory_ToProduct] FOREIGN KEY (ProductId) REFERENCES Product(Id) 
 )

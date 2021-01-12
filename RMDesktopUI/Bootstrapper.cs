@@ -5,6 +5,7 @@ using RMDesktopUI.Library.Models;
 using RMDesktopUI.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,10 @@ namespace RMDesktopUI
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
+            var culture = new CultureInfo("es-AR");
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+
             DisplayRootViewFor<ShellViewModel>();
         }
 
